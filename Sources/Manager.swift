@@ -22,7 +22,7 @@ SOFTWARE.
 */
 
 import Foundation
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(visionOS)
     import UIKit
 #elseif os(OSX)
     import AppKit
@@ -251,14 +251,14 @@ open class Manager {
         if let extensionContext = extensionContext {
             extensionContext.open(url, completionHandler: extensionContextCompletionHandler)
         } else {
-            #if os(iOS) || os(tvOS)
+            #if os(iOS) || os(tvOS) || os(visionOS)
             UIApplication.shared.open(url)
             #elseif os(OSX)
             NSWorkspace.shared.open(url)
             #endif
         }
         #else
-        #if os(iOS) || os(tvOS)
+        #if os(iOS) || os(tvOS) || os(visionOS)
         UIApplication.shared.open(url)
         #elseif os(OSX)
         NSWorkspace.shared.open(url)

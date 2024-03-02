@@ -21,7 +21,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 import Foundation
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(visionOS)
     import UIKit
 #elseif os(OSX)
     import AppKit
@@ -41,7 +41,7 @@ open class Client {
         guard let url = URL(string: "\(self.urlScheme)://dummy") else {
             return false
         }
-        #if os(iOS) || os(tvOS)
+        #if os(iOS) || os(tvOS) || os(visionOS)
             return UIApplication.shared.canOpenURL(url)
 
         #elseif os(OSX)
