@@ -1,4 +1,4 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.9
 // Package.swift
 /*
  The MIT License (MIT)
@@ -24,7 +24,7 @@ import PackageDescription
 
 let package = Package(
     name: "CallbackURLKit-VisionOS-Fork",
-    platforms: [.iOS(.v11), .macOS(.v10_14), .tvOS(.v10), .visionOS(.v1)],
+    platforms: [.iOS(.v12), .macOS(.v10_14), .tvOS(.v12), .visionOS(.v1)],
     products: [
         .library(name: "CallbackURLKit", targets: ["CallbackURLKit"])
     ],
