@@ -23,8 +23,8 @@
 import PackageDescription
 
 let package = Package(
-    name: "CallbackURLKit",
-    platforms: [.iOS(.v11), .macOS(.v10_14), .tvOS(.v10)],
+    name: "CallbackURLKit-VisionOS-Fork",
+    platforms: [.iOS(.v11), .macOS(.v10_14), .tvOS(.v10), .visionOS(.v1)],
     products: [
         .library(name: "CallbackURLKit", targets: ["CallbackURLKit"])
     ],
